@@ -1,0 +1,28 @@
+project:
+  name: LiFT-NIDS
+
+seed: 42
+
+data:
+  task: binary_classification
+  target_column: label
+  id_column: flow_id
+  timestamp_column: timestamp
+  split_protocol: static  # static | temporal | crossdataset
+  split:
+    train_size: 0.60
+    val_size: 0.20
+    test_size: 0.20
+    shuffle: true
+    stratify: true
+  temporal_sequence:
+    enabled: false
+    group_by: src_ip
+    sort_by: timestamp
+    window_size: 16
+    stride: 1
+  preprocessing:
+    drop_columns: []
+    numerical_imputation: median
+    categorical_imputation: most_frequent
+    scaling: standard

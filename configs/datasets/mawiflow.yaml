@@ -1,0 +1,27 @@
+project:
+  name: LiFT-NIDS
+
+seed: 42
+
+dataset:
+  name: MAWIFlow
+  domain: backbone_network_traffic
+  source: local
+  path: data/processed/mawiflow
+  file_format: parquet
+  label_column: label
+  timestamp_column: timestamp
+  default_split_protocol: temporal
+  supported_split_protocols:
+    - static
+    - temporal
+  temporal:
+    timestamp_available: true
+    default_granularity: minute
+  task:
+    type: binary_classification
+    n_classes: 2
+    label_column: label
+    label_multiclass_column: label_multiclass
+    label_multiclass_role: audit_only
+  role: "Dataset principal de avaliação temporal (Eixo 2 — forward-chaining drift)."

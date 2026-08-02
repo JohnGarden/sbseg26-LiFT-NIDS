@@ -1,0 +1,44 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          python-version: "3.11"
+
+      - name: Sync dependencies
+        run: uv sync --all-groups
+
+      - name: Static check
+        run: uv run python -m compileall src scripts tests
+
+      - name: Unit tests
+        run: uv run python -m pytest -q
+
+      - name: Smoke test
+        run: |
+          uv run python scripts/validate_config.py --config configs/experiments/exp_001_ciciot_static_xgb.yaml
+          uv run python - <<'EOF'
+          import numpy as np, pandas as pd, pathlib, random
+          rng = np.random.default_rng(42)
+          n = 5000
+          cols = {f"feat_{i:02d}": rng.exponential(1.0, n).astype("float32") for i in range(39)}
+          cols["label"] = rng.integers(0, 2, n).astype("int32")
+          p = pathlib.Path("data/raw/CICIoT2023")
+          p.mkdir(parents=True, exist_ok=True)
+          pd.DataFrame(cols).to_parquet(p / "ciciot2023.parquet", index=False)
+          print(f"[ci] synthetic parquet written: {p / 'ciciot2023.parquet'} ({n} rows, 39 features)")
+          EOF
+          uv run python scripts/run_experiment.py \
+            --config configs/experiments/exp_001_ciciot_static_xgb.yaml \
+            --sample-frac 1.0 --n-trials 1 --max-epochs 2

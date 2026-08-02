@@ -1,0 +1,30 @@
+project:
+  name: LiFT-NIDS
+
+seed: 42
+
+dataset:
+  name: CICIoT2023
+  domain: iot_network_intrusion
+  source: local
+  path: data/raw/CICIoT2023
+  file_format: parquet
+  label_column: label
+  timestamp_column: null
+  default_split_protocol: static
+  supported_split_protocols:
+    - static
+  temporal:
+    timestamp_available: false
+  class_info:
+    num_attack_types: 33
+    num_categories: 7
+    num_iot_devices: 105
+  role: "Sanity check — avaliação intra-dataset binária (Eixo 1). Static split 60/20/20."
+
+task:
+  type: binary_classification
+  n_classes: 2
+  label_column: label
+  label_multiclass_column: label_multiclass
+  label_multiclass_role: audit_only

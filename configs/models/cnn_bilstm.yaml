@@ -1,0 +1,17 @@
+project:
+  name: LiFT-NIDS
+
+seed: 42
+
+model:
+  family: cnn_bilstm
+  name: cnn_bilstm_baseline
+  input_representation: temporal_sequence
+  layer: sequential_classical
+  params:
+    conv_channels: [64, 128]
+    kernel_sizes: [3, 3]
+    lstm_hidden_size: 128
+    lstm_num_layers: 1
+    bidirectional: true
+    dropout: 0.3

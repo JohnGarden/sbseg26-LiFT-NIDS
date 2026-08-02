@@ -1,0 +1,21 @@
+project:
+  name: LiFT-NIDS
+
+seed: 42
+
+model:
+  family: transformer_light
+  name: transformer_light
+  input_representation: temporal_sequence
+  layer: transformer  # camada 3: modelo principal LiFT-NIDS
+  params:
+    d_model: 128
+    n_heads: 2
+    num_layers: 2
+    ff_dim: 512 
+    dropout: 0.1
+    max_seq_len: 256
+  classification_head:
+    strategy: last_token  # last_token | cls_token | attention_pooling
+    hidden_dim: 64
+    dropout: 0.1

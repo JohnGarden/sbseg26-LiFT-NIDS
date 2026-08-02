@@ -1,0 +1,21 @@
+project:
+  name: LiFT-NIDS
+
+seed: 42
+
+training:
+  device: auto  # auto | cpu | cuda
+  epochs: 30
+  batch_size: 256
+  learning_rate: 0.001
+  weight_decay: 0.0
+  early_stopping:
+    enabled: true
+    monitor: val_f1
+    mode: max
+    patience: 5
+    min_delta: 0.0
+  class_imbalance:
+    strategy: inverse_frequency  # none | inverse_frequency | resampling
+    positive_class_weight: null
+    

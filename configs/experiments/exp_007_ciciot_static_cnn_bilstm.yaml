@@ -1,0 +1,27 @@
+project:
+  name: LiFT-NIDS
+
+seed: 42
+
+experiment:
+  name: exp_007_ciciot_static_cnn_bilstm
+  dataset_config: configs/datasets/ciciot2023.yaml
+  model_config: configs/models/cnn_bilstm.yaml
+  base_configs:
+    - configs/base/data.yaml
+    - configs/base/training.yaml
+    - configs/base/evaluation.yaml
+    - configs/base/paths.yaml
+  protocol:
+    split: static
+    crossdataset:
+      enabled: false
+  temporal_sequence:
+    enabled: true
+    window_size: 32
+    stride: 8
+  outputs:
+    save_predictions: true
+    save_checkpoints: true
+    save_metrics_json: true
+    registry_tag: ciciot_static_cnn_bilstm

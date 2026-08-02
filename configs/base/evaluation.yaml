@@ -1,0 +1,21 @@
+project:
+  name: LiFT-NIDS
+
+seed: 42
+
+evaluation:
+  metrics:
+    - accuracy
+    - precision
+    - recall
+    - f1
+    - auc_roc
+    - auc_pr
+    - fpr
+  threshold:
+    strategy: fixed
+    value: 0.5
+  reports:
+    confusion_matrix: true
+    per_class_metrics: true
+    calibration_curve: false

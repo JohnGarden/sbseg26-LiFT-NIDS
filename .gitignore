@@ -1,0 +1,49 @@
+# Virtual environments
+.venv/
+venv/
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# OS/editor
+.DS_Store
+.vscode/
+.idea/
+
+# Local experiment outputs and temporary files
+*.log
+*.tmp
+results/logs/*
+results/checkpoints/*
+results/predictions/*
+results/tables/*
+results/figures/*
+results/registry/*.json
+!results/**/.gitkeep
+
+data/raw/*
+data/interim/*
+data/processed/*
+data/external/*
+data/results/*
+!data/**/.gitkeep
+data/*.parquet
+
+# Regenerated paper figures (outputs of scripts/plot_*.py).
+# pipeline-axis2.png is NOT regenerated: it is the paper's only published
+# figure and must stay versioned.
+docs/paper/figures/trajectory-axis2.*
+docs/paper/figures/naut-comparison.*
+docs/paper/figures/cd-diagram-axis2.*

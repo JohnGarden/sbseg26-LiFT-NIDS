@@ -1,0 +1,17 @@
+project:
+  name: LiFT-NIDS
+  root: .
+
+seed: 42
+
+paths:
+  data_raw: data/raw
+  data_processed: data/processed
+  results_tables: results/tables
+  results_figures: results/figures
+  results_logs: results/logs
+  results_predictions: results/predictions
+  results_checkpoints: results/checkpoints
+  results_registry: results/registry
+  configs: configs
+  notebooks: notebooks

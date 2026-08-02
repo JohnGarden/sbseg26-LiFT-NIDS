@@ -1,0 +1,143 @@
+{
+  "axis": 2,
+  "window": "k_cumulative",
+  "metric": "nAUT_1",
+  "models": [
+    "xgboost",
+    "mlp",
+    "cnn_bilstm",
+    "transformer"
+  ],
+  "seeds": [
+    42,
+    123,
+    456,
+    789,
+    1024
+  ],
+  "per_seed_scores": {
+    "xgboost": [
+      0.3883355679626508,
+      0.32540856581841116,
+      0.3860227691352568,
+      0.3757884181597375,
+      0.4069655745296874
+    ],
+    "mlp": [
+      0.31892685404171667,
+      0.26001507861053774,
+      0.29359080221842104,
+      0.2891292738610393,
+      0.24807998438501427
+    ],
+    "cnn_bilstm": [
+      0.44281397273928086,
+      0.4246142820882556,
+      0.4322439465829595,
+      0.4081572361975201,
+      0.4887201156007048
+    ],
+    "transformer": [
+      0.6386336225074001,
+      0.6189369463599368,
+      0.4975954970036309,
+      0.5120725261375614,
+      0.5738887747678386
+    ]
+  },
+  "friedman": {
+    "statistic": 15.0,
+    "p_value": 0.0018166489665723214,
+    "significant": true,
+    "avg_ranks": {
+      "xgboost": 3.0,
+      "mlp": 4.0,
+      "cnn_bilstm": 2.0,
+      "transformer": 1.0
+    },
+    "nemenyi_critical_difference": 2.0975797164033283,
+    "nemenyi_significant": {
+      "xgboost": {
+        "xgboost": false,
+        "mlp": false,
+        "cnn_bilstm": false,
+        "transformer": false
+      },
+      "mlp": {
+        "xgboost": false,
+        "mlp": false,
+        "cnn_bilstm": false,
+        "transformer": true
+      },
+      "cnn_bilstm": {
+        "xgboost": false,
+        "mlp": false,
+        "cnn_bilstm": false,
+        "transformer": false
+      },
+      "transformer": {
+        "xgboost": false,
+        "mlp": true,
+        "cnn_bilstm": false,
+        "transformer": false
+      }
+    }
+  },
+  "wilcoxon_one_sided": {
+    "primary_prespecified": "transformer > cnn_bilstm",
+    "note": "Only the primary comparison is confirmatory; the remaining pairs are exploratory (direction chosen post hoc from the observed means). Bonferroni column adjusts for 6 pairs.",
+    "pairs": [
+      {
+        "greater": "xgboost",
+        "lesser": "mlp",
+        "role": "exploratory",
+        "statistic": 15.0,
+        "p_value": 0.03125,
+        "p_bonferroni_6": 0.1875
+      },
+      {
+        "greater": "cnn_bilstm",
+        "lesser": "xgboost",
+        "role": "exploratory",
+        "statistic": 15.0,
+        "p_value": 0.03125,
+        "p_bonferroni_6": 0.1875
+      },
+      {
+        "greater": "transformer",
+        "lesser": "xgboost",
+        "role": "exploratory",
+        "statistic": 15.0,
+        "p_value": 0.03125,
+        "p_bonferroni_6": 0.1875
+      },
+      {
+        "greater": "cnn_bilstm",
+        "lesser": "mlp",
+        "role": "exploratory",
+        "statistic": 15.0,
+        "p_value": 0.03125,
+        "p_bonferroni_6": 0.1875
+      },
+      {
+        "greater": "transformer",
+        "lesser": "mlp",
+        "role": "exploratory",
+        "statistic": 15.0,
+        "p_value": 0.03125,
+        "p_bonferroni_6": 0.1875
+      },
+      {
+        "greater": "transformer",
+        "lesser": "cnn_bilstm",
+        "role": "primary_prespecified",
+        "statistic": 15.0,
+        "p_value": 0.03125,
+        "p_bonferroni_6": 0.1875
+      }
+    ]
+  },
+  "timestamp": "2026-07-23T23:11:17",
+  "source": "results/paper_artifacts/axis2/<model>/k_cumulative/seed_<seed>.json",
+  "script": "compute_axis2_stats.py"
+}

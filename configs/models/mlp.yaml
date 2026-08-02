@@ -1,0 +1,15 @@
+project:
+  name: LiFT-NIDS
+
+seed: 42
+
+model:
+  family: mlp
+  name: mlp_baseline
+  input_representation: tabular
+  layer: tabular_deep  # deep learning tabular; entre camada 1 (ensembles) e camada 2 (sequencial)
+  params:
+    hidden_dims: [256, 128, 64]
+    dropout: 0.2
+    activation: relu
+    batch_norm: true

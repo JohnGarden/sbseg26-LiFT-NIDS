@@ -1,0 +1,576 @@
+{
+  "dataset": "MAWIFlow-subset",
+  "sampling_policy": "Systematic temporal sampling of the TheLurps/MAWIFlow manifest: one capture day per quarter per year (preferred months 01/04/07/10; nearest available day when a preferred one is missing upstream). Results are evaluations on MAWIFlow-subset, not a full MAWIFlow/IM28 reproduction (see the README 'MAWIFlow' section).",
+  "download_command": "uv run python scripts/download_mawiflow.py --years 2007 ... 2024 --months 01 04 07 10 --max-days 1",
+  "years_covered": [
+    2007,
+    2008,
+    2009,
+    2010,
+    2011,
+    2012,
+    2013,
+    2014,
+    2015,
+    2016,
+    2017,
+    2018,
+    2019,
+    2020,
+    2021,
+    2022,
+    2023,
+    2024
+  ],
+  "n_years": 18,
+  "n_capture_days_total": 74,
+  "n_flows_total": 9946112,
+  "n_numeric_features": 89,
+  "per_year": [
+    {
+      "year": 2007,
+      "capture_days": [
+        "20070101",
+        "20070102",
+        "20070401",
+        "20070701",
+        "20071001"
+      ],
+      "n_capture_days": 5,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": true,
+      "n_flows": 2718818,
+      "n_benign": 1702996,
+      "n_anomalous": 1015822,
+      "attack_prevalence": 0.3736,
+      "timestamp_min": "2007-01-01T05:00:00.915816",
+      "timestamp_max": "2007-10-01T05:09:48.821565",
+      "parquet_rows_crosscheck": 2718818
+    },
+    {
+      "year": 2008,
+      "capture_days": [
+        "20080101",
+        "20080401",
+        "20080701",
+        "20081001"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 512856,
+      "n_benign": 337951,
+      "n_anomalous": 174905,
+      "attack_prevalence": 0.341,
+      "timestamp_min": "2008-01-01T05:00:00.637273",
+      "timestamp_max": "2008-10-01T05:08:13.675131",
+      "parquet_rows_crosscheck": 512856
+    },
+    {
+      "year": 2009,
+      "capture_days": [
+        "20090101",
+        "20090401",
+        "20090701",
+        "20091001"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 2178006,
+      "n_benign": 1331458,
+      "n_anomalous": 846548,
+      "attack_prevalence": 0.3887,
+      "timestamp_min": "2009-01-01T05:00:01.169296",
+      "timestamp_max": "2009-10-01T05:07:30.499434",
+      "parquet_rows_crosscheck": 2178006
+    },
+    {
+      "year": 2010,
+      "capture_days": [
+        "20100101",
+        "20100401",
+        "20100701",
+        "20101001"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 208334,
+      "n_benign": 97453,
+      "n_anomalous": 110881,
+      "attack_prevalence": 0.5322,
+      "timestamp_min": "2010-01-01T05:00:00.817226",
+      "timestamp_max": "2010-10-01T05:07:57.685110",
+      "parquet_rows_crosscheck": 208334
+    },
+    {
+      "year": 2011,
+      "capture_days": [
+        "20110101",
+        "20110401",
+        "20110701",
+        "20111001"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 1408353,
+      "n_benign": 357499,
+      "n_anomalous": 1050854,
+      "attack_prevalence": 0.7462,
+      "timestamp_min": "2011-01-01T05:00:00.237994",
+      "timestamp_max": "2011-10-01T05:02:30.446641",
+      "parquet_rows_crosscheck": 1408353
+    },
+    {
+      "year": 2012,
+      "capture_days": [
+        "20120101",
+        "20120401",
+        "20120701",
+        "20121001"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 785775,
+      "n_benign": 214521,
+      "n_anomalous": 571254,
+      "attack_prevalence": 0.727,
+      "timestamp_min": "2012-01-01T05:00:00.377221",
+      "timestamp_max": "2012-10-01T05:04:22.932132",
+      "parquet_rows_crosscheck": 785775
+    },
+    {
+      "year": 2013,
+      "capture_days": [
+        "20130102",
+        "20130402",
+        "20130708",
+        "20131008"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 947552,
+      "n_benign": 620870,
+      "n_anomalous": 326682,
+      "attack_prevalence": 0.3448,
+      "timestamp_min": "2013-01-02T05:00:01.100583",
+      "timestamp_max": "2013-10-08T05:01:16.115536",
+      "parquet_rows_crosscheck": 947552
+    },
+    {
+      "year": 2014,
+      "capture_days": [
+        "20140108",
+        "20140408",
+        "20140701",
+        "20141001"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 29442,
+      "n_benign": 16502,
+      "n_anomalous": 12940,
+      "attack_prevalence": 0.4395,
+      "timestamp_min": "2014-01-08T05:00:01.605079",
+      "timestamp_max": "2014-10-01T05:00:27.227187",
+      "parquet_rows_crosscheck": 29442
+    },
+    {
+      "year": 2015,
+      "capture_days": [
+        "20150101",
+        "20150401",
+        "20150701",
+        "20151002"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 51972,
+      "n_benign": 8129,
+      "n_anomalous": 43843,
+      "attack_prevalence": 0.8436,
+      "timestamp_min": "2015-01-01T05:00:00.577550",
+      "timestamp_max": "2015-10-02T05:00:56.325722",
+      "parquet_rows_crosscheck": 51972
+    },
+    {
+      "year": 2016,
+      "capture_days": [
+        "20160103",
+        "20160402",
+        "20160701",
+        "20161001"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 12026,
+      "n_benign": 11400,
+      "n_anomalous": 626,
+      "attack_prevalence": 0.0521,
+      "timestamp_min": "2016-01-03T05:00:00.499454",
+      "timestamp_max": "2016-10-01T05:01:08.169641",
+      "parquet_rows_crosscheck": 12026
+    },
+    {
+      "year": 2017,
+      "capture_days": [
+        "20170101",
+        "20170403",
+        "20170720",
+        "20171001"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 6826,
+      "n_benign": 6686,
+      "n_anomalous": 140,
+      "attack_prevalence": 0.0205,
+      "timestamp_min": "2017-01-01T05:00:00.439840",
+      "timestamp_max": "2017-10-01T05:00:54.261127",
+      "parquet_rows_crosscheck": 6826
+    },
+    {
+      "year": 2018,
+      "capture_days": [
+        "20180122",
+        "20180401",
+        "20180615",
+        "20180701",
+        "20181001"
+      ],
+      "n_capture_days": 5,
+      "months_covered": [
+        "01",
+        "04",
+        "06",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": true,
+      "n_flows": 12102,
+      "n_benign": 10366,
+      "n_anomalous": 1736,
+      "attack_prevalence": 0.1434,
+      "timestamp_min": "2018-01-22T05:00:00.227195",
+      "timestamp_max": "2018-10-01T05:00:45.286359",
+      "parquet_rows_crosscheck": 12102
+    },
+    {
+      "year": 2019,
+      "capture_days": [
+        "20190101",
+        "20190401",
+        "20190701",
+        "20191001"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 11313,
+      "n_benign": 9826,
+      "n_anomalous": 1487,
+      "attack_prevalence": 0.1314,
+      "timestamp_min": "2019-01-01T05:00:00.015403",
+      "timestamp_max": "2019-10-01T05:01:09.933946",
+      "parquet_rows_crosscheck": 11313
+    },
+    {
+      "year": 2020,
+      "capture_days": [
+        "20200102",
+        "20200401",
+        "20200701",
+        "20201001"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 13676,
+      "n_benign": 4262,
+      "n_anomalous": 9414,
+      "attack_prevalence": 0.6884,
+      "timestamp_min": "2020-01-02T05:00:00.187729",
+      "timestamp_max": "2020-10-01T05:00:28.489071",
+      "parquet_rows_crosscheck": 13676
+    },
+    {
+      "year": 2021,
+      "capture_days": [
+        "20210103",
+        "20210401",
+        "20210701",
+        "20211001"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "10"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 31871,
+      "n_benign": 26316,
+      "n_anomalous": 5555,
+      "attack_prevalence": 0.1743,
+      "timestamp_min": "2021-01-03T05:00:00.068403",
+      "timestamp_max": "2021-10-01T05:02:23.604540",
+      "parquet_rows_crosscheck": 31871
+    },
+    {
+      "year": 2022,
+      "capture_days": [
+        "20220101",
+        "20220102",
+        "20220104",
+        "20220105"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01"
+      ],
+      "quarters_covered": [
+        1
+      ],
+      "deviates_from_policy": true,
+      "n_flows": 28397,
+      "n_benign": 23553,
+      "n_anomalous": 4844,
+      "attack_prevalence": 0.1706,
+      "timestamp_min": "2022-01-01T05:00:00.090676",
+      "timestamp_max": "2022-01-05T05:01:31.155607",
+      "parquet_rows_crosscheck": 28397
+    },
+    {
+      "year": 2023,
+      "capture_days": [
+        "20230108",
+        "20230115",
+        "20230401",
+        "20230701"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3
+      ],
+      "deviates_from_policy": true,
+      "n_flows": 970809,
+      "n_benign": 132612,
+      "n_anomalous": 838197,
+      "attack_prevalence": 0.8634,
+      "timestamp_min": "2023-01-08T05:00:00.016940",
+      "timestamp_max": "2023-07-01T05:01:30.573093",
+      "parquet_rows_crosscheck": 970809
+    },
+    {
+      "year": 2024,
+      "capture_days": [
+        "20240101",
+        "20240421",
+        "20240702",
+        "20241119"
+      ],
+      "n_capture_days": 4,
+      "months_covered": [
+        "01",
+        "04",
+        "07",
+        "11"
+      ],
+      "quarters_covered": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "deviates_from_policy": false,
+      "n_flows": 17984,
+      "n_benign": 9136,
+      "n_anomalous": 8848,
+      "attack_prevalence": 0.492,
+      "timestamp_min": "2024-01-01T05:00:00.165434",
+      "timestamp_max": "2024-11-19T05:00:27.314177",
+      "parquet_rows_crosscheck": 17984
+    }
+  ],
+  "row_count_mismatches": [],
+  "audit_provenance": {
+    "source": "results/registry/mawiflow_audit_summary.json",
+    "audit_started_at_utc": "2026-05-01T15:38:29+00:00",
+    "audit_finished_at_utc": "2026-05-01T15:40:44+00:00",
+    "overall_status": "aprovado_com_ressalvas",
+    "approved_for_final_experiments": true
+  },
+  "generated_at": "2026-06-10T20:10:41",
+  "generator": "generate_data_manifest.py"
+}
