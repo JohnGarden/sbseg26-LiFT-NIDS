@@ -84,7 +84,7 @@ Disponíveis (SeloD)", "Artefatos Funcionais (SeloF)", "Artefatos Sustentáveis
 |Badge|Evidence in this repository|
 |---|---|
 |**SeloD**|Public repository under the MIT license ([LICENSE](LICENSE)); all code, configuration and result artifacts are versioned.|
-|**SeloF**|[Minimal test](#minimal-test-teste-mínimo) runs in ~15 s without datasets or GPU; 594-test full suite; `uv.lock` pins every version.|
+|**SeloF**|[Minimal test](#minimal-test-teste-mínimo) runs in ~20 s without datasets or GPU; 596-test full suite (594 passed, 2 skipped); `uv.lock` pins every version.|
 |**SeloS**|Modular library in `src/lift_nids/` with type hints and docstrings; determinism and dependency policies in [Determinism and Reproducibility Policy](#determinism-and-reproducibility-policy); 4 HPO-budget ADRs in `docs/decisions/`.|
 |**SeloR**|Every claim in [Experiments](#experiments-experimentos) has a verification procedure that takes minutes (real recomputation of the §4.2 statistics from the per-seed data) and a full re-run procedure; claim → artifact map in the table opening the section.|
 
